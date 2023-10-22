@@ -30,10 +30,10 @@
 
     - name: Deploy Spring Boot App Container
       docker_container:
-        name: java-app
+        name: health-app
         #become_user: ansible
         #become_method: sudo
-        image: docker.io/mohammedsait/insurance-web-app-cicd  # Replace with your Docker image and tag
+        image: docker.io/mohammedsait/medical  # Replace with your Docker image and tag
         state: started
         #restart_policy: always
         ports:
