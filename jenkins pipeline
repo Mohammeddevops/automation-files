@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage('SCM Checkout'){
+            steps{
+                git 'https://github.com/Mohammeddevops/automation-file.git'
+            }
+        }
+        stage('Execute ansible'){
+            steps{
+                ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'playbook.yml', vaultTmpPath: ''
+            }
+        }
+    }
+}
