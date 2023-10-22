@@ -1,6 +1,6 @@
 ---
 - name: Configure and Deploy Spring Boot App
-  hosts: webserver # Replace with the target host from your inventory file
+  hosts: webservers # Replace with the target host from your inventory file
   become: yes  # This allows the tasks to run with sudo privileges
 
   tasks:
