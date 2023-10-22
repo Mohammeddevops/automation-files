@@ -10,3 +10,21 @@ spec:
     - protocol: TCP
       port: 8082
       targetPort: http-web-app-01
+
+
+
+# can also reffer this
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: cicd-app
+# spec:
+#   selector:
+#     app: cicd-app
+#   ports:
+#     - protocol: TCP
+#       port: 8080
+#       targetPort: 8080  # Assuming your app runs on port 3000
+#   type: NodePort  # Expose the service outside the cluster
+
